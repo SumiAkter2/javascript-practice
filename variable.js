@@ -1,5 +1,12 @@
-var name = "Sumi Akter"; // string
+var myName = "Sumi Akter"; // string
 var roll = 8; // number
 var isStudent = false; // boolean
 
-console.log(name, roll, isStudent);
+// camel case:
+var yourName = "Rotu Akter ";
+// snake case:
+var yoour_name = " Lili Raha";
+// pascal case:
+var UserName = " Hamid ";
+console.log(myName, roll, isStudent);
+console.log(Boolean("false"));
