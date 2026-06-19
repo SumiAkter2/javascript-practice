@@ -70,12 +70,46 @@ if (
 // Problem 05 - PH Email Generator
 // { name: string , roll: number ,department: string  }
 
-
-// উপরের অব্জেক্ট এর Structure টি লক্ষ্য করো।  ph university তে  পড়া student এর Data   student  নামের একটা ভ্যারিয়েবলে সেইভ করা আছে  ।  তোমাকে এমন একটা প্রোগ্রাম লিখতে হবে যেটা   student  অব্জেক্ট এর ডাটা এর উপর ভিত্তি করে  একটা ইমেইল  জেনারেট করে দেবে। ইমেইল টা হবে ঠিক নিচের স্ট্রাকচারে 
+// উপরের অব্জেক্ট এর Structure টি লক্ষ্য করো।  ph university তে  পড়া student এর Data   student  নামের একটা ভ্যারিয়েবলে সেইভ করা আছে  ।  তোমাকে এমন একটা প্রোগ্রাম লিখতে হবে যেটা   student  অব্জেক্ট এর ডাটা এর উপর ভিত্তি করে  একটা ইমেইল  জেনারেট করে দেবে। ইমেইল টা হবে ঠিক নিচের স্ট্রাকচারে
 // name
 // roll
 // .
-// department 
+// department
 // @ph.ac.bd
 
+/** Problem 05 - ( PH Email Generator )  */
+var student = { name: "monu", roll: 1014, department: "eee" };
+//write your code here
 
+if (
+  (typeof student.name === "string") &
+  (typeof student.department === "string") &
+  (typeof student.roll === "number")
+) {
+  console.log(
+    student.name + student.roll + "." + student.department + "@ph.ac.bd",
+  );
+}
+
+// Problem 06 :  Current Salary ( Challenge Problem )
+// হাসান সাহেব সরকারী চাকুরী করেন ।  তিনি কত বছর ধরে  চাকুরী করেন  সেটা  experience নামে একটা ভ্যারিয়েবলে Save করা আছে । হাসান সাহেবে যে salary দিয়ে জয়েন করেছেন সেটা startingSalary নামে একটা ভ্যারিয়েবলে save করা আছে।
+// প্রতি বছর হাসান সাহেবের স্যালারি ৫% করে বৃদ্ধি হয় । হাসান সাহেবের বর্তমান স্যালারি  কত সেটা বের করার জন্য প্রোগ্রাম লেখো। দশমিকের পর সর্বোচ্চ ২ ডিজিট সংখ্যা থাকবে।  এবং নিচের মতো করে আউটপুট দেখাবে।
+/** Problem 06 :  (Current Salary )  */
+var experience = 30; //year
+var startingSalary = 45000; //starting salery
+
+//write your code here
+
+var eachYearIncreaseSalary = startingSalary * (5 / 100); //percentange
+console.log(eachYearIncreaseSalary);
+
+function calculateSalary(startingSalary, eachYearIncreaseSalary, experience) {
+  var currentSalary = startingSalary;
+  for (let i = 0; i < experience; i++) {
+    currentSalary += (startingSalary * eachYearIncreaseSalary) / 100;
+  }
+  return currentSalary.tofixed(2);
+  console.log(currentSalary);
+}
+
+// var presentSalery=experience
