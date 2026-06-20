@@ -33,3 +33,10 @@ while (salary <= 10010) {
   console.log("My salary is" + salary);
   salary = salary + 1;
 }
+
+
+// for loop:
+
+for(let i=0; i<=20; i++){
+    console.log('for loop', i)
+}
