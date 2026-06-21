@@ -46,6 +46,15 @@ if (money >= 25000) {
 var lastDay = 11;
 //write your code here
 
+for (let i = 1; i <= lastDay; i++) {
+  // if ((i - 1) % 3 === 0) {
+  if (i % 3 === 1) {
+    console.log(i + " " + "take a medicine");
+  } else {
+    console.log(i + " " + "rest");
+  }
+}
+
 // Problem 04 - Delete / Store
 // সুমনার পিসি তে অনেক অনেক ফাইল জমে গেছে। সুমনা pdf , docx ফাইল গুলো এবং যেসব ফাইলের নামের প্রথমে # আছে সেগুলো ছাড়া বাকী ফাইল  গুলো কে ডিলিট করে  দিতে চায়।  ফাইল এর  নাম fileName নামক ভ্যারিয়েবলে স্টোর করা আছে।   সুমনার জন্য একটা প্রোগ্রাম লিখে দাও  যেটা সুমনা কে নির্দেশনা দিবে ফাইল টি সে রাখবে না ডিলিট করবে।
 // ফাইলের নামের প্রথমে # থাকলে প্রোগ্রাম টি আউটপুট দেখাবে  "Store"
@@ -94,22 +103,15 @@ if (
 // Problem 06 :  Current Salary ( Challenge Problem )
 // হাসান সাহেব সরকারী চাকুরী করেন ।  তিনি কত বছর ধরে  চাকুরী করেন  সেটা  experience নামে একটা ভ্যারিয়েবলে Save করা আছে । হাসান সাহেবে যে salary দিয়ে জয়েন করেছেন সেটা startingSalary নামে একটা ভ্যারিয়েবলে save করা আছে।
 // প্রতি বছর হাসান সাহেবের স্যালারি ৫% করে বৃদ্ধি হয় । হাসান সাহেবের বর্তমান স্যালারি  কত সেটা বের করার জন্য প্রোগ্রাম লেখো। দশমিকের পর সর্বোচ্চ ২ ডিজিট সংখ্যা থাকবে।  এবং নিচের মতো করে আউটপুট দেখাবে।
-/** Problem 06 :  (Current Salary )  */
-var experience = 30; //year
-var startingSalary = 45000; //starting salery
 
-//write your code here
+// for current salery: /** Problem 06 :  (Current Salary )  */
+var experience = 40;
+var startingSalary = 30000;
 
-var eachYearIncreaseSalary = startingSalary * (5 / 100); //percentange
-console.log(eachYearIncreaseSalary);
+let currentSalary = startingSalary;
 
-function calculateSalary(startingSalary, eachYearIncreaseSalary, experience) {
-  var currentSalary = startingSalary;
-  for (let i = 0; i < experience; i++) {
-    currentSalary += (startingSalary * eachYearIncreaseSalary) / 100;
-  }
-  return currentSalary.tofixed(2);
-  console.log(currentSalary);
+for (let i = 1; i <= experience; i++) {
+  currentSalary *= 1.05;
 }
 
-// var presentSalery=experience
+console.log(currentSalary.toFixed(2));
