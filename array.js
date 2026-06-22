@@ -12,4 +12,10 @@ console.log(carName.length);
 
 carName[4] = "Toyota";
 carName.push("Honda");
-console.log(carName)
+console.log(carName);
+
+console.log(carName.toReversed());
+// create a new array:
+// const brandName = new Array("Hatil", "Rfl", "Segun");
+const brandName2 = Array("Hatil", "Rfl", "Segun");
+console.log(brandName2.length);
