@@ -128,10 +128,23 @@ console.log(copyItems);
 const beasts = ["ant", "bison", "camel", "duck", "bison"];
 console.log(beasts.indexOf("bison"));
 console.log(beasts.indexOf("bison", 2)); // index 2 theke khuja suru korse 4 a "bison " paise
+
 //join()=> return a string  and separator diye sob gulo ek jaigai join kore
 
 const elements = ["Fire", "Air", "Water"];
 
 console.log(elements.join("|"))
-console.log(elements.join("_"))
-console.log(elements.join("000"))
+console.log(typeof elements.join('_'))
+console.log( elements.join("000"))
+
+console.log(Object.keys(elements))
+
+// keys(): return arrays key:
+const iterator= elements.keys();
+console.log(iterator)
+
+
+for ( let key of iterator){
+  console.log(key)
+}
+
