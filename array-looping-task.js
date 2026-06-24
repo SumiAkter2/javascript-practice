@@ -25,11 +25,13 @@ console.log(reversedColor);
 
 // Input:
 const numbers1 = [12, 98, 5, 41, 23, 78, 46];
-// for (let num of numbers1) {
-//   if (numbers1 % 2 === 0) {
-//     console.log(numbers1);
-//   }
-// }
+const evenNum = [];
+for (let num of numbers1) {
+  if (num % 2 === 0) {
+    evenNum.push(num);
+  }
+}
+console.log(evenNum);
 
 // [12, 98, 76, 46]
 
@@ -41,11 +43,10 @@ const numbers1 = [12, 98, 5, 41, 23, 78, 46];
 var names = ["Tom", "Tim", "Tin", "Tik"];
 var newNumbers = "";
 for (let name of names) {
-  console.log(name);
-  newNumbers = name;
+//   console.log(name);
+  newNumbers = newNumbers + name;
 }
-console.log(typeof newNumbers);
-// console.log(num);
+console.log(newNumbers);
 
 // Output:
 
@@ -56,11 +57,15 @@ console.log(typeof newNumbers);
 
 // Input:
 const statement = "I am a hard working person";
-for (let i=0; i<statement.length; i++){
-    console.log(statement[i]);
-    
+
+const words = statement.split(" ");
+const reversedWords = [];
+
+for (let i = words.length - 1; i >= 0; i--) {
+  reversedWords.push(words[i]);
 }
-console.log(statement)
+
+console.log(reversedWords.join(" "));
 // [
 // Output:
 
@@ -73,13 +78,17 @@ console.log(statement)
 //   (1, 2, 3)
 // ][
 const arr1 = [1, 2, 3];
-const arr2 = [];
-const arr3 = arr1.concat(arr2);
-arr3.shift();
-arr3.unshift(99);
-console.log(arr1);
-console.log(arr3);
+// const arr2 = [];
+// const arr3 = arr1.concat(arr2);
+// arr3.shift();
+// arr3.unshift(99);
+// console.log(arr1);
+// console.log(arr3);
 // Expected Output:
+const arr4 = [...arr1];
+arr4[0] = 99;
+console.log(arr1);
+console.log(arr4);
 
 // Original: [1, 2, 3] Copy: [99, 2, 3]
 
@@ -93,7 +102,7 @@ const studentDetails = [
   { name: "Alice", marks: 90 },
 ];
 for (let student of studentDetails) {
-  console.log(student.name + " " + "scored" + " " + student.marks);
+  console.log(student.name + " scored " + student.marks);
 }
 // Expected ooutput:
 // John scored 85
