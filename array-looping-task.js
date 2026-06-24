@@ -25,6 +25,7 @@ console.log(reversedColor);
 
 // Input:
 const numbers1 = [12, 98, 5, 41, 23, 78, 46];
+// console.log(numbers1.reverse())
 const evenNum = [];
 for (let num of numbers1) {
   if (num % 2 === 0) {
